@@ -263,7 +263,7 @@ export default function App() {
       </div>
 
       {/* Two-column layout below */}
-      <div style={{ display: "grid", gridTemplateColumns: "340px 1fr", gap: 24 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "340px minmax(0, 1fr)", gap: 24 }}>
         {/* Left: 4C Controls */}
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
           <Card>
@@ -411,7 +411,7 @@ export default function App() {
   const renderComposition = () => (
     <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
       {/* TOP: License + Metrics + Chart — full width */}
-      <div style={{ display: "grid", gridTemplateColumns: "280px 1fr", gap: 20 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "280px minmax(0,1fr)", gap: 20 }}>
         {/* License control + org metrics stacked */}
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
           <Card>
@@ -450,7 +450,7 @@ export default function App() {
         <Card style={{ minWidth: 0 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
             <div style={{ fontSize: 13, fontWeight: 700, color: COLORS.textPrimary }}>Per-User Cost Breakdown by Group (Composition View)</div>
-            <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+            <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
               {groups.map((g) => {
                 const checked = visibleGroups.includes(g.id);
                 return (
@@ -482,7 +482,7 @@ export default function App() {
       </div>
 
       {/* BOTTOM: Agent definitions + Group cards — two column */}
-      <div style={{ display: "grid", gridTemplateColumns: "380px 1fr", gap: 24 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "380px minmax(0, 1fr)", gap: 24 }}>
         {/* Left: Agent definitions */}
         <Card>
           <SectionLabel icon="🤖" text="Agent Definitions" color={COLORS.blue} />
