@@ -447,7 +447,7 @@ export default function App() {
         </div>
 
         {/* Stacked bar chart */}
-        <Card>
+        <Card style={{ minWidth: 0 }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
             <div style={{ fontSize: 13, fontWeight: 700, color: COLORS.textPrimary }}>Per-User Cost Breakdown by Group (Composition View)</div>
             <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
